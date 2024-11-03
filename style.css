@@ -1,0 +1,67 @@
+/* Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", serif!important;
+}
+
+/* Background Colors */
+.bg-green{
+    background-color:#07ba07!important;
+}
+/* Text Colors */
+.text-green{
+    background-color:#84D684!important;
+}
+
+/* Font Sizes */
+.fs-14{
+    font-size:14px!important;
+}
+
+/* Styling */
+.cursor-pointer{
+    cursor: pointer;
+}
+.search-input {
+    width:450px!important;
+}
+.hr{
+    margin-top: -7px;
+    opacity: 15%;
+}
+
+/* Hover Effects */
+.location-btn:hover{
+background-color: #5c6c754f!important;
+transition:ease 0.3s;
+}
+.home-dropdown button:hover{
+    color:#0aad0a!important;
+}
+.shop-dropdown button:hover{
+    color:#0aad0a!important;
+}
+.stores-dropdown button:hover{
+    color:#0aad0a!important;
+}
+.megamenu-dropdown button:hover{
+    color:#0aad0a!important;
+}
+.pages-dropdown button:hover{
+    color:#0aad0a!important;
+}
+.account-dropdown button:hover{
+    color:#0aad0a!important;
+}
+.dashboard a:hover{
+    color:#0aad0a!important;
+}
+.docs a:hover{
+    color:#0aad0a!important;
+}
+.departments a:hover{
+    background-color:#099309!important;
+}
