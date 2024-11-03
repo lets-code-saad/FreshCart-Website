@@ -11,15 +11,39 @@
 .bg-green{
     background-color:#07ba07!important;
 }
+.bg-yellow{
+    background-color:#FFC107!important;
+}
 /* Text Colors */
 .text-green{
-    background-color:#84D684!important;
+    color:#84D684!important;
 }
 
 /* Font Sizes */
+.fs-12{
+    font-size:12px!important;
+}
 .fs-14{
     font-size:14px!important;
 }
+.fs-16{
+    font-size:16px!important;
+}
+.fs-17{
+    font-size:17px!important;
+}
+.fs-48{
+    font-size:48px!important;
+}
+
+/* Margins And Padding */
+.mt-90{
+    margin-top:90px!important;
+}
+.mt-130{
+    margin-top:130px!important;
+}
+
 
 /* Styling */
 .cursor-pointer{
@@ -31,6 +55,18 @@
 .hr{
     margin-top: -7px;
     opacity: 15%;
+}
+.carousel-1{
+    background-image:url(/imgs/slide-1.jpg);
+    background-size:cover;
+    height:500px;
+    border-radius:10px;
+}
+.carousel-2{
+    background-image:url(/imgs/slider-2.jpg);
+    background-size:cover;
+    height:500px;
+    border-radius:10px;
 }
 
 /* Hover Effects */
@@ -64,4 +100,40 @@ transition:ease 0.3s;
 }
 .departments a:hover{
     background-color:#099309!important;
+}
+.shop-btn:hover{
+    background-color: rgba(0, 0, 0, 0.783)!important;
+    transform: ease .3s;
+}
+.scroll-icon1:hover{
+    background-color: #07ba07!important;
+    color:white!important;
+    cursor: pointer;
+    transform: ease .09s;
+}
+.scroll-icon2:hover{
+    background-color: #07ba07!important;
+    color:white!important;
+    cursor: pointer;
+    transform: ease .09s;
+}
+.carousel-item1:hover{
+    border: 1px solid #07ba07!important;
+    cursor: pointer;
+    transform: ease .09s;
+}
+.carousel-item2:hover{
+    border: 1px solid #07ba07!important;
+    cursor: pointer;
+    transform: ease .09s;
+}
+.carousel-item3:hover{
+    border: 1px solid #07ba07!important;
+    cursor: pointer;
+    transform: ease .09s;
+}
+.carousel-item4:hover{
+    border: 1px solid #07ba07!important;
+    cursor: pointer;
+    transform: ease .09s;
 }
