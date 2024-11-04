@@ -14,6 +14,9 @@
 .bg-yellow{
     background-color:#FFC107!important;
 }
+.text-yellow{
+    color:#FFC107!important;
+}
 /* Text Colors */
 .text-green{
     color:#84D684!important;
@@ -65,8 +68,40 @@
 .carousel-2{
     background-image:url(/imgs/slider-2.jpg);
     background-size:cover;
-    height:500px;
     border-radius:10px;
+    height:500px;
+}
+.img-card-1{
+    background-image:url(/imgs/grocery-banner.png);
+    background-size:cover;
+    border-radius:10px;
+    width: 550px !important;;
+    height: 210px !important;
+}
+.img-card-2{
+    background-image:url(/imgs/grocery-banner-2.jpg);
+    background-size:cover;
+    border-radius:10px;
+    width: 550px !important;;
+    height:210px;
+}
+.hover-icons{
+    display:none;
+}
+.product-1:hover .hover-icons{
+    display:block;
+}
+.product-2:hover .hover-icons{
+    display:block;
+}
+.product-3:hover .hover-icons{
+    display:block;
+}
+.product-4:hover .hover-icons{
+    display:block;
+}
+.product-5:hover .hover-icons{
+    display:block;
 }
 
 /* Hover Effects */
@@ -109,13 +144,13 @@ transition:ease 0.3s;
     background-color: #07ba07!important;
     color:white!important;
     cursor: pointer;
-    transform: ease .09s;
+    transition: ease 890ms;
 }
 .scroll-icon2:hover{
     background-color: #07ba07!important;
     color:white!important;
     cursor: pointer;
-    transform: ease .09s;
+    transition: ease 890ms;
 }
 .carousel-item1:hover{
     border: 1px solid #07ba07!important;
@@ -137,3 +172,23 @@ transition:ease 0.3s;
     cursor: pointer;
     transform: ease .09s;
 }
+.cart-btn:hover{
+    background-color:#099309!important;
+    transition: ease 590ms;
+}
+.hover-icon1:hover{
+    background-color:#099309!important;
+    color:white!important;
+    transition: ease 590ms;
+}
+.hover-icon2:hover{
+    background-color:#099309!important;
+    color:white!important;
+    transition: ease 590ms;
+}
+.hover-icon3:hover{
+    background-color:#099309!important;
+    color:white!important;
+    transition: ease 590ms;
+}
+
