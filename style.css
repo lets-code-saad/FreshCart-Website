@@ -11,6 +11,9 @@
 .bg-green{
     background-color:#07ba07!important;
 }
+.text-green{
+    color:#07ba07!important;
+}
 .bg-yellow{
     background-color:#FFC107!important;
 }
@@ -18,7 +21,7 @@
     color:#FFC107!important;
 }
 /* Text Colors */
-.text-green{
+.text-light-green{
     color:#84D684!important;
 }
 
@@ -85,24 +88,14 @@
     width: 550px !important;;
     height:210px;
 }
+.sales-left-section{
+    background-image: url(/imgs/banner-deal.jpg);
+    border-radius:10px;
+}
 .hover-icons{
     display:none;
 }
-.product-1:hover .hover-icons{
-    display:block;
-}
-.product-2:hover .hover-icons{
-    display:block;
-}
-.product-3:hover .hover-icons{
-    display:block;
-}
-.product-4:hover .hover-icons{
-    display:block;
-}
-.product-5:hover .hover-icons{
-    display:block;
-}
+
 
 /* Hover Effects */
 .location-btn:hover{
@@ -191,4 +184,33 @@ transition:ease 0.3s;
     color:white!important;
     transition: ease 590ms;
 }
-
+.product-1:hover .hover-icons{
+    display:block;
+}
+.product-2:hover .hover-icons{
+    display:block;
+}
+.product-3:hover .hover-icons{
+    display:block;
+}
+.product-4:hover .hover-icons{
+    display:block;
+}
+.product-5:hover .hover-icons{
+    display:block;
+}
+.end-icon1:hover{
+    color: #07ba07!important;
+    cursor: pointer;
+    transition: ease 890ms;
+}
+.end-icon2:hover{
+    color: #07ba07!important;
+    cursor: pointer;
+    transition: ease 890ms;
+}
+.end-icon3:hover{
+    color: #07ba07!important;
+    cursor: pointer;
+    transition: ease 890ms;
+}
