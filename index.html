@@ -7,12 +7,16 @@
   <title>Fresh Cart</title>
   <!-- Style Sheets -->
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/media-query.css">
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <!-- Offline CDn -->
+  <link rel="stylesheet" href="/Bootstrap-5.3.3-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/Bootstrap-5.3.3-dist/js/bootstrap.js">
   <!-- Icons CDN -->
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
@@ -20,22 +24,33 @@
 <body>
 
   <!-- First Header -->
-  <header class="bg-body-secondary">
+  <header class="firstHeader bg-body-secondary">
     <div class="container">
-      <div class="first-header d-flex justify-content-between fs-14 pt-2">
+      <div class="first-header position-relative d-flex justify-content-between fs-14 pt-2">
         <p class="fw-medium text-secondary ">Super Value Deals - Save more with coupons</p>
         <p class="d-flex align-items-center gap-1 fw-medium text-secondary"><iconify-icon
-            icon="flagpack:gb-ukm"></iconify-icon>English<iconify-icon class="cursor-pointer"
+            icon="flagpack:gb-ukm"></iconify-icon>English<iconify-icon onclick="opener(),closer()" id="langOpener" class="cursor-pointer"
             icon="iconamoon:arrow-down-2"></iconify-icon></p>
-      </div>
-    </div>
-  </header>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Languages Exchanger -->
+<section id="langChangeData" class="languagesChangingPop">
+  <div class="lang-changer d-flex justify-content-center flex-column">
+<p class="lang-1 px-4 py-1 border-0 rounded-2 cursor-pointer fs-14 d-flex align-items-center gap-1 fw-medium text-secondary"><iconify-icon
+icon="flagpack:gb-ukm"></iconify-icon>English</p>
+<p class="lang-2 px-4 py-1 border-0 rounded-2 cursor-pointer fs-14 d-flex align-items-center gap-1 fw-medium text-secondary"><iconify-icon
+icon="twemoji:flag-germany"></iconify-icon>Deutsch</p>
+</div>
+</section>
+
 
 
 
   <!-- Second Header -->
   <header class="container mt-4">
-    <div class="header-items d-flex align-items-center justify-content-between">
+    <div class="header-items d-flex align-items-center justify-content-lg-between justify-content-sm-around">
       <div class="header-logo cursor-pointer">
         <img src="/imgs/freshcart-logo.svg" class="img-fluid" alt="Website Logo">
       </div>
@@ -53,26 +68,30 @@
         </div>
       </div>
       <div class="header2-icons d-flex gap-2 fs-3 text-success">
-        <iconify-icon class="cursor-pointer" icon="ph:heart-straight-light"></iconify-icon>
+        <iconify-icon class="navIcons cursor-pointer" icon="ph:heart-straight-light"></iconify-icon>
         <iconify-icon class="cursor-pointer" icon="line-md:account"></iconify-icon>
-        <iconify-icon class="cursor-pointer" icon="ri:shopping-bag-3-line"></iconify-icon>
+        <!-- Cart Sidebar Icon -->
+        <iconify-icon id="cartButton" class="cursor-pointer" icon="ri:shopping-bag-3-line"></iconify-icon>
+        <!-- Nav Sidebar Icon -->
+        <iconify-icon id="navToggleBtn" class="navOpenIcon cursor-pointer" icon="bi:text-indent-left"></iconify-icon>
       </div>
     </div>
   </header>
 
 
   <!-- Nav Bar -->
-  <nav class="container">
+  <nav id="navBar" class="container">
     <header class="d-flex justify-content-start gap-4 align-items-center py-4 fs-14">
       <ul class="nav nav-pills d-flex align-items-center fw-medium">
         <li class="nav-item fw-medium departments"><a href="#"
             class="nav-link d-flex gap-2 align-items-center bg-green text-white " aria-current="page"><iconify-icon
               icon="si:grid-line"></iconify-icon>All Departments</a></li>
-        <div class="home-dropdown dropdown">
-          <button class="btn fw-medium fs-14 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+        <div class="home-dropdown dropdown d-flex align-items-center">
+          <button class="btn fw-medium fs-14 border-0" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Home
           </button>
+          <iconify-icon class="fs-12 fw-normal" icon="fe:arrow-down"></iconify-icon>
           <ul class="dropdown-menu fs-14">
             <li><a class="dropdown-item" href="#">Home 1</a></li>
             <li><a class="dropdown-item" href="#">Home 2</a></li>
@@ -81,11 +100,12 @@
             <li><a class="dropdown-item" href="#">Home 5</a></li>
           </ul>
         </div>
-        <div class="shop-dropdown dropdown">
-          <button class="btn fw-medium fs-14 border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Shop
-          </button>
+        <div class="home-dropdown dropdown d-flex align-items-center">
+        <button class="btn fw-medium fs-14 border-0" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Shop
+      </button>
+      <iconify-icon class="fs-12 fw-normal" icon="fe:arrow-down"></iconify-icon>
           <ul class="dropdown-menu fs-14">
             <li><a class="dropdown-item" href="#">Shop Grid -Filter</a></li>
             <li><a class="dropdown-item" href="#">Shop Grid -3 Column</a></li>
@@ -99,33 +119,36 @@
             <li><a class="dropdown-item" href="#">Shop Checkout</a></li>
           </ul>
         </div>
-        <div class="stores-dropdown dropdown fs-14">
-          <button class="btn fw-medium fs-14 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Stores
-          </button>
+        <div class="home-dropdown dropdown d-flex align-items-center">
+          <button class="btn fw-medium fs-14 border-0" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Stores
+        </button>
+        <iconify-icon class="fs-12 fw-normal" icon="fe:arrow-down"></iconify-icon>
           <ul class="dropdown-menu fs-14">
             <li><a class="dropdown-item" href="#">Store List</a></li>
             <li><a class="dropdown-item" href="#">Store Grid</a></li>
             <li><a class="dropdown-item" href="#">Store Single</a></li>
           </ul>
         </div>
-        <div class="megamenu-dropdown dropdown">
-          <button class="btn fw-medium fs-14 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Mega Menu
-          </button>
+        <div class="home-dropdown dropdown d-flex align-items-center">
+          <button class="btn fw-medium fs-14 border-0" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Mega Menu
+        </button>
+        <iconify-icon class="fs-12 fw-normal" icon="fe:arrow-down"></iconify-icon>
           <ul class="dropdown-menu fs-14">
             <li><a class="dropdown-item" href="#">Store List</a></li>
             <li><a class="dropdown-item" href="#">Store Grid</a></li>
             <li><a class="dropdown-item" href="#">Store Single</a></li>
           </ul>
         </div>
-        <div class="pages-dropdown dropdown">
-          <button class="btn fw-medium fs-14 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Pages
-          </button>
+        <div class="home-dropdown dropdown d-flex align-items-center">
+          <button class="btn fw-medium fs-14 border-0" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Pages
+        </button>
+        <iconify-icon class="fs-12 fw-normal" icon="fe:arrow-down"></iconify-icon>
           <ul class="dropdown-menu fs-14">
             <li><a class="dropdown-item" href="#">Blog</a></li>
             <li><a class="dropdown-item" href="#">Blog Single</a></li>
@@ -135,14 +158,15 @@
             <li><a class="dropdown-item" href="#">Contact</a></li>
           </ul>
         </div>
-        <div class="account-dropdown dropdown">
-          <button class="btn fw-medium fs-14 dropdown-toggle border-0" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Account
-          </button>
+        <div class="home-dropdown dropdown d-flex align-items-center">
+          <button class="btn fw-medium fs-14 border-0" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Account
+        </button>
+        <iconify-icon class="fs-12 fw-normal" icon="fe:arrow-down"></iconify-icon>
           <ul class="dropdown-menu fs-14">
-            <li><a class="dropdown-item" href="#">Sign in</a></li>
-            <li><a class="dropdown-item" href="#">Signup</a></li>
+            <li><a class="dropdown-item" href="/pages/sign-in.html">Sign in</a></li>
+            <li><a class="dropdown-item" href="/pages/sign-up.html">Signup</a></li>
             <li><a class="dropdown-item" href="#">Forgot Password</a></li>
             <li><a class="dropdown-item" href="#">My Account</a></li>
           </ul>
@@ -153,6 +177,246 @@
     </header>
   </nav>
   <hr class="hr">
+
+  <!-- Responsive Nav Side Bar -->
+  <section id="sidebarNavData" class="mobileNav">
+    <div class="container">
+      <div class="navLogo mt-3">
+        <img src="/imgs/freshcart-logo.svg" class="img-fluid" alt="">
+        <iconify-icon id="navCloserIcon" class="text-secondary cursor-pointer fs-3"
+          icon="bitcoin-icons:cross-filled"></iconify-icon>
+      </div>
+      <div class="headerSearch mt-3 opacity-75 gap-2">
+        <div class="input w-100 d-flex align-items-center position-relative">
+          <input class="search-input-sm w-100 fs-14 border border-dark-subtle ps-3 py-2 fw-medium rounded-2 bg-white"
+            type="text" placeholder="Search for products">
+          <iconify-icon class="fs-4 position-absolute end-0 cursor-pointer mt-1 pe-3 text-secondary"
+            icon="weui:search-outlined"></iconify-icon>
+        </div>
+        <div class="headerLocation w-100 mt-1">
+          <button
+            class="locationBtn w-100 fs-14 d-flex fw-medium text-secondary align-items-center gap-2 border border-dark-subtle px-3 py-2 rounded-2 bg-white"><iconify-icon
+              icon="mynaui:location"></iconify-icon>Pick a Location</button>
+        </div>
+      </div>
+
+      <ul class="nav nav-pills d-flex flex-column gap-2 fw-medium">
+        <li class="nav-item w-100 mt-3 mb-3 fw-medium departments"><a href="#"
+            class="nav-link d-flex justify-content-center gap-2 align-items-center bg-green text-white "
+            aria-current="page"><iconify-icon icon="si:grid-line"></iconify-icon>All Departments</a></li>
+        <div class="home-dropdown dropdown d-flex align-items-center justify-content-between">
+          <button class="btn fw-medium fs-14 border-0 d-flex gap-2 align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </button>
+          <iconify-icon class="fs-14" icon="fe:arrow-down"></iconify-icon>
+          <ul class="dropdown-menu fs-14 w-100">
+            <li><a class="dropdown-item" href="#">Home 1</a></li>
+            <li><a class="dropdown-item" href="#">Home 2</a></li>
+            <li><a class="dropdown-item" href="#">Home 3</a></li>
+            <li><a class="dropdown-item" href="#">Home 4</a></li>
+            <li><a class="dropdown-item" href="#">Home 5</a></li>
+          </ul>
+        </div>
+        <div class="home-dropdown dropdown d-flex align-items-center justify-content-between">
+          <button class="btn fw-medium fs-14 border-0 d-flex gap-2 align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Shop
+          </button>
+          <iconify-icon class="fs-14" icon="fe:arrow-down"></iconify-icon>
+          <ul class="dropdown-menu fs-14 w-100">
+            <li><a class="dropdown-item" href="#">Shop Grid -Filter</a></li>
+            <li><a class="dropdown-item" href="#">Shop Grid -3 Column</a></li>
+            <li><a class="dropdown-item" href="#">Shop List - Filter</a></li>
+            <li><a class="dropdown-item" href="#">Shop Filter</a></li>
+            <li><a class="dropdown-item" href="#">Shop Wide</a></li>
+            <li><a class="dropdown-item" href="#">Shop Single</a></li>
+            <li><a class="dropdown-item" href="#">Shop Single v2</a></li>
+            <li><a class="dropdown-item" href="#">Shop Wishlist</a></li>
+            <li><a class="dropdown-item" href="#">Shop Cart</a></li>
+            <li><a class="dropdown-item" href="#">Shop Checkout</a></li>
+          </ul>
+        </div>
+        <div class="home-dropdown dropdown d-flex align-items-center justify-content-between">
+          <button class="btn fw-medium fs-14 border-0 d-flex gap-2 align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Stores
+          </button>
+          <iconify-icon class="fs-14" icon="fe:arrow-down"></iconify-icon>
+          <ul class="dropdown-menu fs-14 w-100">
+            <li><a class="dropdown-item" href="#">Store List</a></li>
+            <li><a class="dropdown-item" href="#">Store Grid</a></li>
+            <li><a class="dropdown-item" href="#">Store Single</a></li>
+          </ul>
+        </div>
+        <div class="home-dropdown dropdown d-flex align-items-center justify-content-between">
+          <button class="btn fw-medium fs-14 border-0 d-flex gap-2 align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Megamenu
+          </button>
+          <iconify-icon class="fs-14" icon="fe:arrow-down"></iconify-icon>
+          <ul class="dropdown-menu fs-14 w-100">
+            <li><a class="dropdown-item" href="#">Store List</a></li>
+            <li><a class="dropdown-item" href="#">Store Grid</a></li>
+            <li><a class="dropdown-item" href="#">Store Single</a></li>
+          </ul>
+        </div>
+        <div class="home-dropdown dropdown d-flex align-items-center justify-content-between">
+          <button class="btn fw-medium fs-14 border-0 d-flex gap-2 align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pages
+          </button>
+          <iconify-icon class="fs-14" icon="fe:arrow-down"></iconify-icon>
+          <ul class="dropdown-menu fs-14 w-100">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">Blog Single</a></li>
+            <li><a class="dropdown-item" href="#">Blog Category</a></li>
+            <li><a class="dropdown-item" href="#">About us</a></li>
+            <li><a class="dropdown-item" href="#">404 Error</a></li>
+            <li><a class="dropdown-item" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="home-dropdown dropdown d-flex align-items-center justify-content-between">
+          <button class="btn fw-medium fs-14 border-0 d-flex gap-2 align-items-center justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </button>
+          <iconify-icon class="fs-14" icon="fe:arrow-down"></iconify-icon>
+          <ul class="dropdown-menu fs-14 w-100">
+            <li><a class="dropdown-item" href="/pages/sign-in.html">Sign in</a></li>
+            <li><a class="dropdown-item" href="/pages/sign-up.html">Signup</a></li>
+            <li><a class="dropdown-item" href="#">Forgot Password</a></li>
+            <li><a class="dropdown-item" href="#">My Account</a></li>
+          </ul>
+        </div>
+        <li class="nav-item dashboard"><a href="#" class="nav-link fs-14 text-black">Dashboard</a></li>
+        <li class="nav-item docs"><a href="#" class="nav-link fs-14 text-black">Docs</a></li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- Cart SideBar Section -->
+  <section id="cartSidebar" class="sidebar-section">
+    <div class="container">
+      <div class="sidebar-head d-flex align-items-center justify-content-between">
+        <h6 class="fw-semibold fs-5">Shop Cart <br> <span class="fw-medium text-secondary fs-12">Location in 382480</h6>
+        <!-- Cart Close Button -->
+        <iconify-icon id="cartCloser" class="text-secondary cursor-pointer fs-3"
+          icon="bitcoin-icons:cross-filled"></iconify-icon>
+      </div>
+      <hr class="hr mt-2">
+      <div class="free-delivery">
+        <p class="bg-light-pink border border-danger border-opacity-25 rounded-2 py-2 px-3 fw-medium fs-14">You’ve got
+          FREE delivery. Start <b>checkout now!</b></p>
+      </div>
+      <hr class="hr">
+      <div class="all-carts">
+        <div class="cart-item-1 d-flex justify-content-between align-items-center ">
+          <div class="d-flex align-items-center">
+            <img src="/imgs/product-img-1.jpg" class="img-fluid" alt="" width="85px">
+            <div class="cart-1-details d-flex flex-column">
+              <h6>Haldiram's Sev Bhujia <br> <span class="fs-12 text-secondary">.98 / lb</span></h6>
+              <p class="fs-12 fw-medium text-secondary d-flex gap-2 align-items-center"><iconify-icon
+                  class="fs-14 text-green" icon="mynaui:trash"></iconify-icon>Remove</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">-</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">1</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">+</p>
+          </div>
+          <div class="priceTag">
+            <h5 class="fw-semibold fs-14">$5.00</h5>
+          </div>
+        </div>
+
+        <div class="cart-item-2 d-flex justify-content-between align-items-center ">
+          <div class="d-flex align-items-center">
+            <img src="/imgs/product-img-2.jpg" class="img-fluid" alt="" width="85px">
+            <div class="cart-1-details d-flex flex-column">
+              <h6>NutriChoice Digestive <br> <span class="fs-12 text-secondary">250g </span></h6>
+              <p class="fs-12 fw-medium text-secondary d-flex gap-2 align-items-center"><iconify-icon
+                  class="fs-14 text-green" icon="mynaui:trash"></iconify-icon>Remove</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">-</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">1</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">+</p>
+          </div>
+          <div class="priceTag">
+            <h5 class="fw-semibold fs-14 text-danger">$20.00 <br> <span
+                class="fw-medium text-secondary fs-12 text-decoration-line-through ms-2">$26.00</span></h5>
+          </div>
+        </div>
+
+        <div class="cart-item-3 d-flex justify-content-between align-items-center ">
+          <div class="d-flex align-items-center">
+            <img src="/imgs/product-img-3.jpg" class="img-fluid" alt="" width="85px">
+            <div class="cart-1-details d-flex flex-column">
+              <h6>Cadbury 5 Star Chocolate <br> <span class="fs-12 text-secondary">1 kg</span></h6>
+              <p class="fs-12 fw-medium text-secondary d-flex gap-2 align-items-center"><iconify-icon
+                  class="fs-14 text-green" icon="mynaui:trash"></iconify-icon>Remove</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">-</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">1</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">+</p>
+          </div>
+          <div class="priceTag">
+            <h5 class="fw-semibold fs-14 text-black d-flex flex-column">$15.00 <br> <span
+                class="fw-medium text-secondary fs-12 text-decoration-line-through ms-1">$20.00</span></h5>
+          </div>
+        </div>
+
+        <div class="cart-item-4 d-flex justify-content-between align-items-center ">
+          <div class="d-flex align-items-center">
+            <img src="/imgs/product-img-4.jpg" class="img-fluid" alt="" width="85px">
+            <div class="cart-1-details d-flex flex-column">
+              <h6>Onion Flavour Potato <br> <span class="fs-12 text-secondary">250g</span></h6>
+              <p class="fs-12 fw-medium text-secondary d-flex gap-2 align-items-center"><iconify-icon
+                  class="fs-14 text-green" icon="mynaui:trash"></iconify-icon>Remove</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">-</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">1</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">+</p>
+          </div>
+          <div class="priceTag">
+            <h5 class="fw-semibold fs-14 text-black">$15.00 <br> <span
+                class="fw-medium text-secondary fs-12 text-decoration-line-through ms-1">$20.00</span></h5>
+          </div>
+        </div>
+
+        <div class="cart-item-5 d-flex justify-content-between align-items-center ">
+          <div class="d-flex align-items-center">
+            <img src="/imgs/product-img-5.jpg" class="img-fluid" alt="" width="85px">
+            <div class="cart-1-details d-flex flex-column">
+              <h6>Salted Instant Popcorn<br> <span class="fs-12 text-secondary">100g</span></h6>
+              <p class="fs-12 fw-medium text-secondary d-flex gap-2 align-items-center"><iconify-icon
+                  class="fs-14 text-green" icon="mynaui:trash"></iconify-icon>Remove</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">-</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">1</p>
+            <p class="border rounded-1 border-opacity-25 px-2 py-1 fs-14">+</p>
+          </div>
+          <div class="priceTag">
+            <h5 class="fw-semibold fs-14 text-black d-flex flex-column">$15.00 <br> <span
+                class="fw-medium text-secondary fs-12 text-decoration-line-through ms-1">$25.00</span></h5>
+          </div>
+        </div>
+
+        <div class="cartButtons d-flex justify-content-between">
+          <button
+            class="nav-item d-flex align-items-center border-0 rounded-3 fw-medium bg-green text-white px-2 py-2 ms-2 mt-4">Continue
+            Shopping</button>
+          <button
+            class="shop-btn d-flex align-items-center border-0 rounded-3 bg-black text-white px-3 py-2 ms-2 mt-4">Update
+            Cart</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 
   <!-- Hero Section -->
@@ -813,154 +1077,168 @@
   <!-- Icons Cards Section -->
   <section class="icon-cards-section container mt-5 pt-5">
     <div class="icon-cards row">
-    <div class="icon-card-1 col-lg-3 col-md-4 col-sm-12">
-      <img src="/imgs/clock.svg" alt="">
-      <h5 class="fw-semibold mt-3">10 minute grocery now</h5>
-      <p class="text-secondary fw-medium fs-14">Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.</p>
-    </div>
-    <div class="icon-card-2 col-lg-3 col-md-4 col-sm-12">
-      <img src="/imgs/gift.svg" alt="">
-      <h5 class="fw-semibold mt-3">Best Prices & Offers</h5>
-      <p class="text-secondary fw-medium fs-14">Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers.</p>
-    </div>
-    <div class="icon-card-1 col-lg-3 col-md-4 col-sm-12">
-      <img src="/imgs/package.svg" alt="">
-      <h5 class="fw-semibold mt-3">Wide Assortment</h5>
-      <p class="text-secondary fw-medium fs-14">Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.
-      </p>
-    </div>
-    <div class="icon-card-1 col-lg-3 col-md-4 col-sm-12">
-      <img src="/imgs/refresh-cw.svg" alt="">
-      <h5 class="fw-semibold mt-3">Easy Returns</h5>
-      <p class="text-secondary fw-medium fs-14">Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked <span class="text-green cursor-pointer">policy</span>.
-      </p>
-    </div>
+      <div class="icon-card-1 col-lg-3 col-md-4 col-sm-12">
+        <img src="/imgs/clock.svg" alt="">
+        <h5 class="fw-semibold mt-3">10 minute grocery now</h5>
+        <p class="text-secondary fw-medium fs-14">Get your order delivered to your doorstep at the earliest from
+          FreshCart pickup stores near you.</p>
+      </div>
+      <div class="icon-card-2 col-lg-3 col-md-4 col-sm-12">
+        <img src="/imgs/gift.svg" alt="">
+        <h5 class="fw-semibold mt-3">Best Prices & Offers</h5>
+        <p class="text-secondary fw-medium fs-14">Cheaper prices than your local supermarket, great cashback offers to
+          top it off. Get best pricess & offers.</p>
+      </div>
+      <div class="icon-card-1 col-lg-3 col-md-4 col-sm-12">
+        <img src="/imgs/package.svg" alt="">
+        <h5 class="fw-semibold mt-3">Wide Assortment</h5>
+        <p class="text-secondary fw-medium fs-14">Choose from 5000+ products across food, personal care, household,
+          bakery, veg and non-veg & other categories.
+        </p>
+      </div>
+      <div class="icon-card-1 col-lg-3 col-md-4 col-sm-12">
+        <img src="/imgs/refresh-cw.svg" alt="">
+        <h5 class="fw-semibold mt-3">Easy Returns</h5>
+        <p class="text-secondary fw-medium fs-14">Not satisfied with a product? Return it at the doorstep & get a refund
+          within hours. No questions asked <span class="text-green cursor-pointer">policy</span>.
+        </p>
+      </div>
     </div>
   </section>
 
 
-<!-- Footer Section -->
-<div class="footer-section bg-body-tertiary mt-5">
-  <footer class="container py-5">
-    <div class="row">
-      <div class="col-6 col-md-2 mb-3">
-        <h5 class="fs-16">Categories</h5>
-        <ul class="nav flex-column fs-14 mt-3 fw-medium">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Vegetables & Fruits</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Breakfast & instant food</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bakery & Biscuits</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Atta, rice & dal</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sauces & spreads</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Organic & gourmet</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Baby care</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cleaning essentials</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Personal care</a></li>
-        </ul>
+  <!-- Footer Section -->
+  <div class="footer-section bg-body-tertiary mt-5">
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="fs-16">Categories</h5>
+          <ul class="nav flex-column fs-14 mt-3 fw-medium">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Vegetables & Fruits</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Breakfast & instant food</a>
+            </li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bakery & Biscuits</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Atta, rice & dal</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sauces & spreads</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Organic & gourmet</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Baby care</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cleaning essentials</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Personal care</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <ul class="nav flex-column fs-14 mt-4 pt-2 fw-medium">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Dairy, bread & eggs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cold drinks & juices</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tea, coffee & drinks</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Masala, oil & more</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chicken, meat & fish</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Paan corner</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pharma & wellness</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home & office</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pet care</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="fs-16">Get to know us</h5>
+          <ul class="nav flex-column fs-14  mt-3 fw-medium">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Company</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help Center</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Value</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="fs-16">For Consumers</h5>
+          <ul class="nav flex-column fs-14 mt-3 fw-medium">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Payments</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Product Returns</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shop Checkout</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="fs-16">Become a Shopper</h5>
+          <ul class="nav flex-column fs-14 mt-3 fw-medium">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shopper Opportunities</a>
+            </li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Become a Shopper</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Earnings</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ideas & Guides</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Retailers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="fs-16">Freshcart programs</h5>
+          <ul class="nav flex-column fs-14 mt-3 fw-medium">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart programs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Promos & Coupons</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart Ads</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="payment-options d-flex flex-wrap justify-content-between">
+        <div class="d-flex align-items-center flex-sm-row py-4 my-4 border-top">
+          <div>
+            <h6 class="mt-2">Payment Partners</h6>
+          </div>
+          <div class="d-flex ms-3 gap-3 align-items-center">
+            <img src="/imgs/amazonpay.svg" alt="">
+            <img src="/imgs/american-express.svg" alt="">
+            <img src="/imgs/mastercard.svg" alt="">
+            <img src="/imgs/paypal.svg" alt="">
+            <img src="/imgs/visa.svg" alt="">
+          </div>
+        </div>
+
+        <div class="d-flex gap-3 flex-wrap align-items-center flex-sm-row py-4 my-4 border-top">
+          <div>
+            <h6 class="mt-2">Get deliveries with FreshCart</h6>
+          </div>
+          <div class="d-flex gap-3 align-items-center">
+            <img src="/imgs/appstore-btn.svg" class="img-fluid" alt="">
+            <img src="/imgs/googleplay-btn.svg" class="img-fluid" alt="">
+
+          </div>
+        </div>
       </div>
 
-      <div class="col-6 col-md-2">
-        <ul class="nav flex-column fs-14 mt-4 pt-2 fw-medium">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Dairy, bread & eggs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cold drinks & juices</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tea, coffee & drinks</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Masala, oil & more</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chicken, meat & fish</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Paan corner</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pharma & wellness</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home & office</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pet care</a></li>
-        </ul>
-      </div>
+      <div class="ending-line d-flex justify-content-between border-top align-items-center">
+        <div class="d-flex flex-column flex-sm-row mt-2 pt-2">
+          <p class="fs-12 text-secondary">© 2022 - 2024 FreshCart eCommerce HTML Template. All rights reserved. Powered
+            by <br>
+            <span class="text-green cursor-pointer">Codescandy .</span>
+          </p>
+        </div>
 
-      <div class="col-6 col-md-2 mb-3">
-        <h5 class="fs-16">Get to know us</h5>
-        <ul class="nav flex-column fs-14  mt-3 fw-medium">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Company</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help Center</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Value</a></li>
-        </ul>
-      </div>
+        <div class="d-flex gap-3 flex-sm-row align-items-center py-2">
+          <div>
+            <p class="fs-12 text-secondary mt-2 pt-1">Follow us on</p>
+          </div>
+          <div class="d-flex gap-1 align-items-center">
+            <iconify-icon class="end-icon1 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1"
+              icon="ic:baseline-facebook"></iconify-icon>
+            <iconify-icon class="end-icon2 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1"
+              icon="mdi:twitter"></iconify-icon>
+            <iconify-icon class="end-icon3 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1"
+              icon="line-md:instagram"></iconify-icon>
+          </div>
+        </div>
 
-      <div class="col-6 col-md-2 mb-3">
-        <h5 class="fs-16">For Consumers</h5>
-        <ul class="nav flex-column fs-14 mt-3 fw-medium">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Payments</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Product Returns</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shop Checkout</a></li>
-        </ul>
       </div>
-      <div class="col-6 col-md-2 mb-3">
-        <h5 class="fs-16">Become a Shopper</h5>
-        <ul class="nav flex-column fs-14 mt-3 fw-medium">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shopper Opportunities</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Become a Shopper</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Earnings</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ideas & Guides</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Retailers</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md-2 mb-3">
-        <h5 class="fs-16">Freshcart programs</h5>
-        <ul class="nav flex-column fs-14 mt-3 fw-medium">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart programs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Promos & Coupons</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart Ads</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
-        </ul>
-      </div>
+    </footer>
+  </div>
 
-    </div>
-<div class="payment-options d-flex justify-content-between">
-    <div class="d-flex align-items-center flex-sm-row py-4 my-4 border-top">
-      <div>
-        <h6 class="mt-2">Payment Partners</h6>
-      </div>
-<div class="d-flex ms-3 gap-3 align-items-center">
-      <img src="/imgs/amazonpay.svg" alt="">
-      <img src="/imgs/american-express.svg" alt="">
-      <img src="/imgs/mastercard.svg" alt="">
-      <img src="/imgs/paypal.svg" alt="">
-      <img src="/imgs/visa.svg" alt="">
-    </div>
-    </div>
-
-    <div class="d-flex align-items-center flex-sm-row py-4 my-4 border-top">
-      <div>
-        <h6 class="mt-2">Get deliveries with FreshCart</h6>
-      </div>
-<div class="d-flex ms-3 gap-3 align-items-center">
-  <img src="/imgs/appstore-btn.svg" class="img-fluid" alt="">
-      <img src="/imgs/googleplay-btn.svg" class="img-fluid" alt="">
-
-    </div>
-    </div>
-    </div>
-
-    <div class="ending-line d-flex justify-content-between border-top align-items-center">
-    <div class="d-flex flex-column flex-sm-row mt-2 pt-2">
-      <p class="fs-12 text-secondary">© 2022 - 2024 FreshCart eCommerce HTML Template. All rights reserved. Powered by <br>
-         <span class="text-green cursor-pointer">Codescandy .</span></p>
-    </div>
-
-    <div class="d-flex gap-3 flex-sm-row align-items-center py-2">
-      <div>
-        <p class="fs-12 text-secondary mt-2 pt-1">Follow us on</p>
-      </div>
-      <div class="d-flex gap-1 align-items-center">
-      <iconify-icon class="end-icon1 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1" icon="ic:baseline-facebook"></iconify-icon>
-      <iconify-icon class="end-icon2 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1" icon="mdi:twitter"></iconify-icon>
-      <iconify-icon class="end-icon3 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1" icon="line-md:instagram"></iconify-icon>
-    </div>
-    </div>
-
-    </div>
-  </footer>
-</div>
+  <!-- Script File -->
+  <script src="/script.js"></script>
 
 </body>
 

@@ -11,19 +11,28 @@
 .bg-green{
     background-color:#07ba07!important;
 }
-.text-green{
-    color:#07ba07!important;
+.bg-light-pink{
+    background-color:#f8d6d6!important;
 }
 .bg-yellow{
     background-color:#FFC107!important;
 }
-.text-yellow{
-    color:#FFC107!important;
-}
+
+
 /* Text Colors */
 .text-light-green{
     color:#84D684!important;
 }
+.text-light-pink{
+    color:#f8d6d6!important;
+}
+.text-green{
+    color:#07ba07!important;
+}
+.text-yellow{
+    color:#FFC107!important;
+}
+
 
 /* Font Sizes */
 .fs-12{
@@ -56,7 +65,7 @@
     cursor: pointer;
 }
 .search-input {
-    width:450px!important;
+    width:450px;
 }
 .hr{
     margin-top: -7px;
@@ -97,6 +106,62 @@
 }
 .sells-icons{
     top:200px;
+}
+.languagesChangingPop{
+    display:none;
+}
+.lang-changer{
+    position:absolute;
+    right:55px;
+    z-index:1000;
+    background: #fff;
+    box-shadow: -0px 0 2px lightgray;
+    padding:0px 10px;
+    /* border:1px solid white; */
+    border-radius:5px;
+}
+.lang-1:hover{
+    background-color: #5c6c754f!important;
+    transition:ease 500ms;
+}
+.lang-2:hover{
+    background-color: #5c6c754f!important;
+    transition:ease 500ms;
+}
+
+/* SideBar Styling */
+.sidebar-section {
+    transition: ease 990ms;
+    display:none;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 560px;          
+    height: 100vh;           
+    background: #fff;
+    box-shadow: -0px 0 2px lightgray;
+    padding: 10px 5px;
+    z-index: 1000;            /* Ensure the sidebar is above other content */
+    overflow: hidden;         /* Prevent the sidebar content from overflowing the sidebar */
+}
+
+/* Cart List Styling with Scrolling */
+.all-carts {
+    max-height: 60vh;        /* You can adjust this value as needed */
+    overflow-y: auto;        /* Enable vertical scroll if content overflows */
+    padding-right: 10px;     /* Optional: Adds space to prevent scrollbar overlap */
+}
+.end-15{
+    position:absolute;
+    right:15px;
+}
+.navOpenIcon{
+    display:none;
+}
+
+/* Nav SideBar */
+.mobileNav{
+    display:none;
 }
 
 
