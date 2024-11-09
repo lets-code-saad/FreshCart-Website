@@ -42,20 +42,36 @@
     <div class="login-right d-flex flex-column justify-content-center">
         <h3 class="fw-semibold">Get Start Shopping</h3>
     <p class="fs-14 fw-medium text-secondary">Welcome back to FreshCart! Enter your email to get <br> started.</p>
-    <form class="mt-3">
+    <form id="signupForm">
+      <!-- Names Input -->
         <div class="name-inputs d-flex gap-3">
-            <input class="email-input w-100 fs-14 border text-secondary  ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
-    type="email" placeholder="First Name">    
-            <input class="email-input w-100 fs-14 border text-secondary  ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
-    type="email" placeholder="Second Name">    
-        </div>
-    <input class="email-input w-100 fs-14 border text-secondary mt-3  ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
+          <div>
+            <input id="firstName" class="firstName-input border-1 w-100 fs-14 text-secondary  ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
+    type="text" placeholder="First Name"> 
+    <span id="firstNameError"></span>   
+</div>
+<div>
+    <input id="secondName" class="secondName-input border-1 w-100 fs-14 text-secondary  ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
+    type="text" placeholder="Second Name">  
+    <span id="secondNameError"></span>  
+  </div>
+</div>
+  <!-- Email -->
+    <input id="emailInput" class="email-input border-1 w-100 fs-14 text-secondary mt-3  ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
     type="email" placeholder="Email">
+<div class="emailErrDiv">
+    <span id="emailError"></span>
+</div>
+    <!-- Password -->
     <div class="position-relative d-flex align-items-center">
-    <input required class="pass-input w-100 mt-3 fs-14 border text-secondary ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
+    <input id="passInput" class="pass-input border-1 w-100 mt-3 fs-14 text-secondary ps-3 pe-5 py-2 fw-medium rounded-2 bg-white"
     type="password" placeholder="****">
     <iconify-icon class="position-absolute mt-2 pt-2 text-secondary cursor-pointer end-15" icon="lucide:eye-off"></iconify-icon>
 </div>
+<div class="passErrorDiv">
+<span id="passwordError"></span>
+</div>
+<!-- Submit Button -->
 <div class="d-flex align-items-center gap-2 mt-3">
     <button type="submit"
       class="cart-btn fw-medium w-100 border-0 rounded-3 bg-green text-white py-2 fs-16">Register</button>
@@ -69,126 +85,136 @@
 
 <!-- Footer Section -->
 <div class="footer-section bg-body-tertiary mt-5">
-    <footer class="container py-5">
-      <div class="row">
-        <div class="col-6 col-md-2 mb-3">
-          <h5 class="fs-16">Categories</h5>
-          <ul class="nav flex-column fs-14 mt-3 fw-medium">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Vegetables & Fruits</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Breakfast & instant food</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bakery & Biscuits</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Atta, rice & dal</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sauces & spreads</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Organic & gourmet</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Baby care</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cleaning essentials</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Personal care</a></li>
-          </ul>
-        </div>
-    
-        <div class="col-6 col-md-2">
-          <ul class="nav flex-column fs-14 mt-4 pt-2 fw-medium">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Dairy, bread & eggs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cold drinks & juices</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tea, coffee & drinks</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Masala, oil & more</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chicken, meat & fish</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Paan corner</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pharma & wellness</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home & office</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pet care</a></li>
-          </ul>
-        </div>
-    
-        <div class="col-6 col-md-2 mb-3">
-          <h5 class="fs-16">Get to know us</h5>
-          <ul class="nav flex-column fs-14  mt-3 fw-medium">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Company</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help Center</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Value</a></li>
-          </ul>
-        </div>
-    
-        <div class="col-6 col-md-2 mb-3">
-          <h5 class="fs-16">For Consumers</h5>
-          <ul class="nav flex-column fs-14 mt-3 fw-medium">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Payments</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Product Returns</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shop Checkout</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-2 mb-3">
-          <h5 class="fs-16">Become a Shopper</h5>
-          <ul class="nav flex-column fs-14 mt-3 fw-medium">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shopper Opportunities</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Become a Shopper</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Earnings</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ideas & Guides</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Retailers</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-2 mb-3">
-          <h5 class="fs-16">Freshcart programs</h5>
-          <ul class="nav flex-column fs-14 mt-3 fw-medium">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart programs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Promos & Coupons</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart Ads</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
-          </ul>
-        </div>
-    
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="fs-16">Categories</h5>
+        <ul class="nav flex-column fs-14 mt-3 fw-medium">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Vegetables & Fruits</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Breakfast & instant food</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bakery & Biscuits</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Atta, rice & dal</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sauces & spreads</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Organic & gourmet</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Baby care</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cleaning essentials</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Personal care</a></li>
+        </ul>
       </div>
+
+      <div class="col-6 col-md-2">
+        <ul class="nav flex-column fs-14 mt-4 pt-2 fw-medium">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Dairy, bread & eggs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cold drinks & juices</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tea, coffee & drinks</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Masala, oil & more</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Chicken, meat & fish</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Paan corner</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pharma & wellness</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home & office</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pet care</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="fs-16">Get to know us</h5>
+        <ul class="nav flex-column fs-14  mt-3 fw-medium">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Company</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help Center</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Value</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="fs-16">For Consumers</h5>
+        <ul class="nav flex-column fs-14 mt-3 fw-medium">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Payments</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Product Returns</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shop Checkout</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="fs-16">Become a Shopper</h5>
+        <ul class="nav flex-column fs-14 mt-3 fw-medium">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shopper Opportunities</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Become a Shopper</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Earnings</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ideas & Guides</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Retailers</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2 mb-3">
+        <h5 class="fs-16">Freshcart programs</h5>
+        <ul class="nav flex-column fs-14 mt-3 fw-medium">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart programs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Promos & Coupons</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Freshcart Ads</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
     <div class="payment-options d-flex flex-wrap justify-content-between">
       <div class="d-flex align-items-center flex-sm-row py-4 my-4 border-top">
         <div>
           <h6 class="mt-2">Payment Partners</h6>
         </div>
-    <div class="d-flex ms-3 gap-3 align-items-center">
-        <img src="/imgs/amazonpay.svg" alt="">
-        <img src="/imgs/american-express.svg" alt="">
-        <img src="/imgs/mastercard.svg" alt="">
-        <img src="/imgs/paypal.svg" alt="">
-        <img src="/imgs/visa.svg" alt="">
+        <div class="d-flex ms-3 gap-3 align-items-center">
+          <img src="/imgs/amazonpay.svg" class="cursor-pointer" alt="">
+          <img src="/imgs/american-express.svg" class="cursor-pointer" alt="">
+          <img src="/imgs/mastercard.svg" class="cursor-pointer" alt="">
+          <img src="/imgs/paypal.svg" class="cursor-pointer" alt="">
+          <img src="/imgs/visa.svg" class="cursor-pointer" alt="">
+        </div>
       </div>
-      </div>
-    
+
       <div class="d-flex gap-3 flex-wrap align-items-center flex-sm-row py-4 my-4 border-top">
         <div>
           <h6 class="mt-2">Get deliveries with FreshCart</h6>
         </div>
-    <div class="d-flex gap-3 align-items-center">
-    <img src="/imgs/appstore-btn.svg" class="img-fluid" alt="">
-        <img src="/imgs/googleplay-btn.svg" class="img-fluid" alt="">
-    
+        <div class="d-flex gap-3 align-items-center">
+          <img src="/imgs/appstore-btn.svg" class="img-fluid cursor-pointer" alt="">
+          <img src="/imgs/googleplay-btn.svg" class="img-fluid cursor-pointer" alt="">
+
+        </div>
       </div>
-      </div>
-      </div>
-    
-      <div class="ending-line d-flex justify-content-between border-top align-items-center">
+    </div>
+
+    <div class="ending-line d-flex justify-content-between border-top align-items-center">
       <div class="d-flex flex-column flex-sm-row mt-2 pt-2">
-        <p class="fs-12 text-secondary">© 2022 - 2024 FreshCart eCommerce HTML Template. All rights reserved. Powered by <br>
-           <span class="text-green cursor-pointer">Codescandy .</span></p>
+        <p class="fs-12 text-secondary">© 2022 - 2024 FreshCart eCommerce HTML Template. All rights reserved. Powered
+          by <br>
+          <span class="text-green cursor-pointer">Codescandy .</span>
+        </p>
       </div>
-    
+
       <div class="d-flex gap-3 flex-sm-row align-items-center py-2">
         <div>
           <p class="fs-12 text-secondary mt-2 pt-1">Follow us on</p>
         </div>
         <div class="d-flex gap-1 align-items-center">
-        <iconify-icon class="end-icon1 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1" icon="ic:baseline-facebook"></iconify-icon>
-        <iconify-icon class="end-icon2 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1" icon="mdi:twitter"></iconify-icon>
-        <iconify-icon class="end-icon3 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1" icon="line-md:instagram"></iconify-icon>
+          <iconify-icon class="end-icon1 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1"
+            icon="ic:baseline-facebook"></iconify-icon>
+          <iconify-icon class="end-icon2 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1"
+            icon="mdi:twitter"></iconify-icon>
+          <iconify-icon class="end-icon3 text-secondary text-center fs-4 border border-1 rounded-2 px-1 py-1"
+            icon="line-md:instagram"></iconify-icon>
+        </div>
       </div>
-      </div>
-    
-      </div>
-    </footer>
-    </div>
 
+    </div>
+  </footer>
+</div>
+
+  <!-- Script File -->
+  <script src="/scripts/sign-up.js"></script>
+  
 </body>
 </html>
