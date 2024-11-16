@@ -1,0 +1,242 @@
+/* SideBar Styling */
+.sidebar-section {
+    transition: ease 990ms;
+    display:none;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 560px;          
+    height: 100vh;           
+    background: #fff;
+    box-shadow: -0px 0 2px lightgray;
+    padding: 10px 5px;
+    z-index: 1000;            /* Ensure the sidebar is above other content */
+    overflow: hidden;         /* Prevent the sidebar content from overflowing the sidebar */
+}
+
+/* Cart List Styling with Scrolling */
+.all-carts {
+    max-height: 60vh;        /* You can adjust this value as needed */
+    overflow-y: auto;
+    overflow-x:auto;        /* Enable vertical scroll if content overflows */
+    padding-right: 10px;     /* Optional: Adds space to prevent scrollbar overlap */
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.imageElementProd1{
+width:70px;
+}
+.imageElementProd2{
+width:70px;
+}
+.imageElementProd3{
+width:70px;
+}
+.imageElementProd4{
+width:70px;
+}
+.imageElementProd5{
+width:70px;
+}
+.imageElementProd6{
+width:70px;
+}
+.imageElementProd7{
+width:70px;
+}
+.imageElementProd8{
+width:70px;
+}
+.imageElementProd9{
+width:70px;
+}
+.imageElementProd10{
+width:70px;
+}
+.imageElementProd11{
+width:70px;
+}
+.imageElementProd12{
+width:70px;
+}
+.imageElementProd13{
+width:70px;
+}
+
+.cartItem1Data{
+    display:flex;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+
+.cartItem2Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem3Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem4Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem5Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem6Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem7Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem8Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem9Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem10Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem11Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem12Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+.cartItem13Data{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+align-items: center;
+justify-content: space-between;
+}
+
+.dynamic-counter{
+    position:absolute;
+    top:-7px;
+    right:-10px;
+    font-size:15px;
+    background-color: #099309;
+    color:white;
+    border:0;
+    border-radius:60px;
+    padding:0px 5px;
+}
+.removeBtn{
+    font-size:18px;
+    cursor:pointer;
+}
+
+
+/* Dynamic */
+.products-line-1{
+    display:flex;
+    flex-wrap:wrap;
+    gap:55px;
+}
+.all-carts{
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    gap:10px;
+}
+.cart-item-1{
+display:flex;
+align-items: center;
+justify-content: space-between;
+}
+.cartProd1st{
+    display: flex;
+    align-items: center;
+}
+.cartProd1Img{
+    width:80px;
+}
+.quantitySection{
+    display:flex;
+    align-items:center;
+    font-size:14px;
+    padding:6px 13px;
+    gap:12px;
+}
+.quantitySection :nth-child(1){
+    border-right: 1px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-size: 14px;
+}
+.quantitySection :nth-child(3){
+    border-left: 1px solid rgba(0,0,0,0.2);
+    cursor: pointer;
+    font-size: 14px;
+}
+names{
+    display:flex;
+    flex-direction:column;
+}
+.priceSection h6{
+    font-size:14px;
+}
+.names h6{
+    font-size:14px;
+}
+.names span{
+    color:#859198;
+    font-size:12px;
+}
+.names p{
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+    gap:5px;
+    color:#859198;
+    font-size:12px;
+}
+.names p iconify-icon{
+    color:#099309;
+}

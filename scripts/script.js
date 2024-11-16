@@ -1,16 +1,3 @@
-// Cart Side Bar
-let cartData = document.getElementById("cartSidebar");
-let cartToggle = document.getElementById("cartButton");
-let cartCloseBtn = document.getElementById("cartCloser");
-
-cartToggle.addEventListener("click", () => {
-  cartData.style.display = "block";
-  console.log("Cart Page")
-})
-cartCloseBtn.addEventListener("click", () => {
-  cartData.style.display = "none";
-})
-
 // Nav Side Bar
 let navOpener = document.getElementById("navToggleBtn")
 let navCloser = document.getElementById("navCloserIcon")
@@ -27,8 +14,9 @@ let languagesChanger = document.getElementById("langOpener")
 let languages = document.getElementById("langChangeData")
 
 
-languagesChanger.addEventListener("click", () => {
-  if (languages.style.display === "none") {
+languagesChanger.addEventListener("click", ()=> {
+  if (languages.style.display === "none")
+    {
     languages.style.display = "block";
   }
   else {

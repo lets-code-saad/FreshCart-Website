@@ -1,0 +1,88 @@
+[
+{
+"id" : "1",
+"heading" : "Snack & Munchies" ,
+"name": "Haldiram's Sev Bhujia",
+"price": "$18",
+"img": "/imgs/product-img-1.jpg"
+},
+{
+"id" : "2",
+"heading" : "Bakery & Biscuits" ,
+"name": "NutriChoice Digestive",
+"price": "$24",
+"img": "/imgs/product-img-2.jpg"
+},
+{
+"id" : "3",
+"heading" : "Bakery & Biscuits" ,
+"name": "Cadbury 5 Star Chocolate",
+"price": "$32",
+"img": "/imgs/product-img-3.jpg"
+},
+{
+"id" : "4",
+"heading" : "Snack & Munchies" ,
+"name": "Onion Flavour Potato",
+"price": "$3",
+"img": "/imgs/product-img-4.jpg"
+},
+{
+"id" : "5",
+"heading" : "Instant Food" ,
+"name": "Salted Instant Popcorn",
+"price": "$13",
+"img": "/imgs/product-img-5.jpg"
+},
+{
+"id" : "6",
+"heading" : "Blueberry Greek Yogurt" ,
+"name": "Blueberry Greek Yogurt",
+"price": "$18",
+"img": "/imgs/product-img-6.jpg"
+},
+{
+"id" : "7",
+"heading" : "Dairy, Bread & Eggs" ,
+"name": "Britannia Cheese Slices",
+"price": "$18",
+"img": "/imgs/product-img-7.jpg"
+},
+{
+"id" : "8",
+"heading" : "Instant Food" ,
+"name": "Kellogg's Original Cereals",
+"price": "$32",
+"img": "/imgs/product-img-8.jpg"
+},
+{
+"id" : "9",
+"heading" : "Snack & Munchies" ,
+"name": "Slurrp Millet Chocolate",
+"price": "$3",
+"img": "/imgs/product-img-9.jpg"
+},
+{
+"id" : "10",
+"heading" : "Dairy, Bread & Eggs" ,
+"name": "Amul Butter - 500 g",
+"price": "$13",
+"img": "/imgs/product-img-10.jpg"
+},
+{
+    "id" : "11",
+    "heading" : "Tea, Coffee & Drinks" ,
+    "name": "Roast Ground Coffee",
+    "price": "$13",
+    "img": "/imgs/product-img-11.jpg"
+    },
+    {
+    "id" : "12",
+    "heading" : "Fruits & Vegetables" ,
+    "name": "Crushed Tomatoes",
+    "price": "$13",
+    "img": "/imgs/product-img-12.jpg"
+    }
+
+
+]

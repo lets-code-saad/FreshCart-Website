@@ -129,32 +129,15 @@
     transition:ease 500ms;
 }
 
-/* SideBar Styling */
-.sidebar-section {
-    transition: ease 990ms;
-    display:none;
-    position: fixed;
-    top: 0;
-    right: 0px;
-    width: 560px;          
-    height: 100vh;           
-    background: #fff;
-    box-shadow: -0px 0 2px lightgray;
-    padding: 10px 5px;
-    z-index: 1000;            /* Ensure the sidebar is above other content */
-    overflow: hidden;         /* Prevent the sidebar content from overflowing the sidebar */
-}
-
-/* Cart List Styling with Scrolling */
-.all-carts {
-    max-height: 60vh;        /* You can adjust this value as needed */
-    overflow-y: auto;        /* Enable vertical scroll if content overflows */
-    padding-right: 10px;     /* Optional: Adds space to prevent scrollbar overlap */
-}
 .end-15{
     position:absolute;
     right:15px;
 }
+.myImage{
+    width:85px;
+}
+
+
 .navOpenIcon{
     display:none;
 }
