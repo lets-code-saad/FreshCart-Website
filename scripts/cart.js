@@ -101,6 +101,7 @@ let addCartToHTML = (product) => {
           </div>
 `;
 allCartProducts.appendChild(allProductsDiv)
+alert("Product Has Successfully Added!")
 //  For Cart Icon Counting 
 cartCounter.push(product)
 dynamicCounterIcon.innerHTML = cartCounter.length;
@@ -122,7 +123,6 @@ decrementQuantity.addEventListener('click', ()=>{
 });
 
 }
-// addCartToHTML()
 
 async function initApp() {
   // Fetching Data From Json File

@@ -15,7 +15,7 @@ const storedEmail = localStorage.getItem("userEmail")
 const storedPass = localStorage.getItem("userPassword")
 
 if(email.value===storedEmail && password.value ===storedPass){
-  setTimeout(function(){        // To cleat the styling after submitting
+  setTimeout(function(){        // To clear the styling after submitting
     alert("Login Succeeded")
     window.location.href = "/index.html"  // To Redirect To the homepage
   },1000)

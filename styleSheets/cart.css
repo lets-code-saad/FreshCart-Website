@@ -16,9 +16,8 @@
 
 /* Cart List Styling with Scrolling */
 .all-carts {
-    max-height: 60vh;        /* You can adjust this value as needed */
-    overflow-y: auto;
-    overflow-x:auto;        /* Enable vertical scroll if content overflows */
+    max-height: 70vh;        /* You can adjust this value as needed */
+    overflow: auto;        /* Enable vertical scroll if content overflows */
     padding-right: 10px;     /* Optional: Adds space to prevent scrollbar overlap */
 display:flex;
 flex-direction:column;
@@ -27,134 +26,6 @@ gap:30px;
 
 .imageElementProd1{
 width:70px;
-}
-.imageElementProd2{
-width:70px;
-}
-.imageElementProd3{
-width:70px;
-}
-.imageElementProd4{
-width:70px;
-}
-.imageElementProd5{
-width:70px;
-}
-.imageElementProd6{
-width:70px;
-}
-.imageElementProd7{
-width:70px;
-}
-.imageElementProd8{
-width:70px;
-}
-.imageElementProd9{
-width:70px;
-}
-.imageElementProd10{
-width:70px;
-}
-.imageElementProd11{
-width:70px;
-}
-.imageElementProd12{
-width:70px;
-}
-.imageElementProd13{
-width:70px;
-}
-
-.cartItem1Data{
-    display:flex;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-
-.cartItem2Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem3Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem4Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem5Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem6Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem7Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem8Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem9Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem10Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem11Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem12Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
-}
-.cartItem13Data{
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
-align-items: center;
-justify-content: space-between;
 }
 
 .dynamic-counter{
@@ -180,12 +51,13 @@ justify-content: space-between;
     flex-wrap:wrap;
     gap:55px;
 }
-.all-carts{
+/* .all-carts{
     display:flex;
-    justify-content: center;
     flex-direction:column;
+    justify-content: center;
     gap:10px;
-}
+    max-height: 80vh;
+} */
 .cart-item-1{
 display:flex;
 align-items: center;
@@ -196,7 +68,7 @@ justify-content: space-between;
     align-items: center;
 }
 .cartProd1Img{
-    width:80px;
+    width:70px;
 }
 .quantitySection{
     display:flex;
